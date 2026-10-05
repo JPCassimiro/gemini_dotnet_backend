@@ -1,14 +1,23 @@
 using Telegram.Bot;
+using jsonToGemin.Interfaces;
 
 namespace jsonToGemin.Services;
 
-public class TelegramService
+public class TelegramService: IChatProviderService
 {
     private readonly TelegramBotClient _bot;//bot variable
+    private readonly string telegramKey = DotNetEnv.Env.GetString("TELEGRAM_API");
 
     public TelegramService(IConfiguration config)
     {
-        _bot = new TelegramBotClient("TELEGRAM_KEY");//new bot instance
+        
+        if (string.IsNullOrWhiteSpace(telegramKey))
+        {
+            throw new InvalidOperationException("Unable to get TELEGRAM_API");
+        }
+
+        _bot = new TelegramBotClient(telegramKey);//new bot instance
+
     }
 
     //sends a response message to the client

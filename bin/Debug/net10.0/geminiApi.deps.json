@@ -8,8 +8,11 @@
     ".NETCoreApp,Version=v10.0": {
       "geminiApi/1.0.0": {
         "dependencies": {
+          "Cloudflare.NET.Api": "3.7.0",
+          "DotNetEnv": "3.2.0",
           "Google.GenAI": "1.16.0",
           "Google_GenerativeAI": "3.6.7",
+          "Groq": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.10",
           "NSwag.AspNetCore": "14.7.1",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3",
@@ -17,6 +20,29 @@
         },
         "runtime": {
           "geminiApi.dll": {}
+        }
+      },
+      "Cloudflare.NET.Api/3.7.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Http.Resilience": "8.0.0",
+          "RateLimitHeaders.Polly": "1.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Cloudflare.NET.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          }
+        }
+      },
+      "DotNetEnv/3.2.0": {
+        "dependencies": {
+          "Superpower": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DotNetEnv.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
         }
       },
       "Google.Apis/1.69.0": {
@@ -74,6 +100,14 @@
           }
         }
       },
+      "Groq/1.0.0": {
+        "runtime": {
+          "lib/net10.0/Groq.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.10": {
         "dependencies": {
           "Microsoft.OpenApi": "2.7.5"
@@ -85,11 +119,134 @@
           }
         }
       },
+      "Microsoft.Bcl.TimeProvider/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Bcl.TimeProvider.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "Microsoft.Extensions.AI.Abstractions/10.6.0": {
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
             "assemblyVersion": "10.6.0.0",
             "fileVersion": "10.600.26.26104"
+          }
+        }
+      },
+      "Microsoft.Extensions.AmbientMetadata.Application/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.AmbientMetadata.Application.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.Compliance.Abstractions/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Compliance.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.AutoActivation/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.DiagnosticAdapter/3.1.32": {
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {
+            "assemblyVersion": "3.1.32.0",
+            "fileVersion": "3.100.3222.56602"
+          }
+        }
+      },
+      "Microsoft.Extensions.Diagnostics.ExceptionSummarization/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http.Diagnostics/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.AutoActivation": "8.0.0",
+          "Microsoft.Extensions.DiagnosticAdapter": "3.1.32",
+          "Microsoft.Extensions.Telemetry": "8.0.0",
+          "Microsoft.IO.RecyclableMemoryStream": "2.3.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Http.Diagnostics.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55102"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http.Resilience/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Http.Diagnostics": "8.0.0",
+          "Microsoft.Extensions.Resilience": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Http.Resilience.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.Resilience/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.ExceptionSummarization": "8.0.0",
+          "Microsoft.Extensions.Telemetry.Abstractions": "8.0.0",
+          "Polly.Core": "8.0.0",
+          "Polly.Extensions": "8.0.0",
+          "Polly.RateLimiting": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Resilience.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.Telemetry/8.0.0": {
+        "dependencies": {
+          "Microsoft.Bcl.TimeProvider": "8.0.0",
+          "Microsoft.Extensions.AmbientMetadata.Application": "8.0.0",
+          "Microsoft.Extensions.Compliance.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.AutoActivation": "8.0.0",
+          "Microsoft.Extensions.Telemetry.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Telemetry.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.Extensions.Telemetry.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Compliance.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Telemetry.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.55811"
+          }
+        }
+      },
+      "Microsoft.IO.RecyclableMemoryStream/2.3.2": {
+        "runtime": {
+          "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll": {
+            "assemblyVersion": "2.3.2.0",
+            "fileVersion": "2.3.2.0"
           }
         }
       },
@@ -246,6 +403,64 @@
           }
         }
       },
+      "Polly.Core/8.0.0": {
+        "runtime": {
+          "lib/net6.0/Polly.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.2195"
+          }
+        }
+      },
+      "Polly.Extensions/8.0.0": {
+        "dependencies": {
+          "Polly.Core": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Polly.Extensions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.2195"
+          }
+        }
+      },
+      "Polly.RateLimiting/8.0.0": {
+        "dependencies": {
+          "Polly.Core": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Polly.RateLimiting.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.2195"
+          }
+        }
+      },
+      "RateLimitHeaders/1.0.0": {
+        "runtime": {
+          "lib/net10.0/RateLimitHeaders.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RateLimitHeaders.Polly/1.0.0": {
+        "dependencies": {
+          "Polly.Core": "8.0.0",
+          "RateLimitHeaders": "1.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/RateLimitHeaders.Polly.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Superpower/3.0.0": {
+        "runtime": {
+          "lib/net5.0/Superpower.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore.Swagger/10.2.3": {
         "dependencies": {
           "Microsoft.OpenApi": "2.7.5"
@@ -308,6 +523,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Cloudflare.NET.Api/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Fcikr2bm25w+iDB7QUqDTT7xTibmGioJJv+KyzNh/8W0VwaFm9qeCwzs0+IOHq1fV+HT1L+aDnbTP76SQVjzA==",
+      "path": "cloudflare.net.api/3.7.0",
+      "hashPath": "cloudflare.net.api.3.7.0.nupkg.sha512"
+    },
+    "DotNetEnv/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2q+PD+aJcRW9QuRcIv4F8WbvEDxI6cwxzZJec2i45cBY4cAKCAoW4ZPkApJ7H82wr6Yfmxx/0kb1nLnRmZrGZA==",
+      "path": "dotnetenv/3.2.0",
+      "hashPath": "dotnetenv.3.2.0.nupkg.sha512"
+    },
     "Google.Apis/1.69.0": {
       "type": "package",
       "serviceable": true,
@@ -343,6 +572,13 @@
       "path": "google_generativeai/3.6.7",
       "hashPath": "google_generativeai.3.6.7.nupkg.sha512"
     },
+    "Groq/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ouk9D5Fm0Xx08VAkmgXeUDBZ4Imimakj3miEFZLuoZmMtWGMQIZrLiix2O5bP25C0DnJ/tzRdEYTnYZRzzeaiw==",
+      "path": "groq/1.0.0",
+      "hashPath": "groq.1.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.OpenApi/10.0.10": {
       "type": "package",
       "serviceable": true,
@@ -350,12 +586,96 @@
       "path": "microsoft.aspnetcore.openapi/10.0.10",
       "hashPath": "microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512"
     },
+    "Microsoft.Bcl.TimeProvider/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f5Kr5JepAbiGo7uDmhgvMqhntwxqXNn6/IpTBSSI4cuHhgnJGrLxFRhMjVpRkLPp6zJXO0/G0l3j9p9zSJxa+w==",
+      "path": "microsoft.bcl.timeprovider/8.0.0",
+      "hashPath": "microsoft.bcl.timeprovider.8.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.AI.Abstractions/10.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JCkVoyqBqi9r3Vs5Qo5PfZobT0+CWeOx+9y9yggBxtW9s/X5CAoa7Iw/tP/rfUdz+nxRKMSBmrytYgwmu60lgA==",
       "path": "microsoft.extensions.ai.abstractions/10.6.0",
       "hashPath": "microsoft.extensions.ai.abstractions.10.6.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.AmbientMetadata.Application/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KW4QZv6zVfytBV15Dflu2dwcR9IKiMeS5kwp+vuWfM+bDi8wAd8KdJ8xfMaX3xiIN/Futw/Kpzf01TA8ALRbXw==",
+      "path": "microsoft.extensions.ambientmetadata.application/8.0.0",
+      "hashPath": "microsoft.extensions.ambientmetadata.application.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Compliance.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FZ+Y66GF0VwvPgQSmMMNNUxEtjy3Nh9r2iTvZW+UXUtHPmdtXg85NtVYYihhR8guNNQ0LZgfioxiRRjbMECfvw==",
+      "path": "microsoft.extensions.compliance.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.compliance.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.AutoActivation/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NuHa4iADMRvcfaHCGV2ZDPwx5cn5GsA/bSkOnwBFkkdpgIsNounqYtyfuorJMwtxHjqGeWEhBLzPHvd+Oemjow==",
+      "path": "microsoft.extensions.dependencyinjection.autoactivation/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.autoactivation.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DiagnosticAdapter/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oDv3wt+Q5cmaSfOQ3Cdu6dF6sn/x5gzWdNpOq4ajBwCMWYBr6CchncDvB9pF83ORlbDuX32MsVLOPGPxW4Lx4g==",
+      "path": "microsoft.extensions.diagnosticadapter/3.1.32",
+      "hashPath": "microsoft.extensions.diagnosticadapter.3.1.32.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.ExceptionSummarization/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3gTLqY8tsiflTXweUdLy4pFj15x3kuGSglhem6UM3FZaui+Bcee7PT/tkV3WMcBRwQ2tsBEAS8XuaSEcbvGLPQ==",
+      "path": "microsoft.extensions.diagnostics.exceptionsummarization/8.0.0",
+      "hashPath": "microsoft.extensions.diagnostics.exceptionsummarization.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http.Diagnostics/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OtaXg8tmoz47bf9M+9J9b9H4e1Wdr7mabSjQ+74eUiBAoIoddA59XtDIli5PcsVAjybzreTFEgOM+aw8/0U6FA==",
+      "path": "microsoft.extensions.http.diagnostics/8.0.0",
+      "hashPath": "microsoft.extensions.http.diagnostics.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http.Resilience/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NyZ8XPwgPfyXRdSq1wYc16Zf71patMLPHtT+nBkMRP7Jdcxf+Q3XaE6MEk3mAQBfUsV6OxyL4vvnZTZ+S3wdIA==",
+      "path": "microsoft.extensions.http.resilience/8.0.0",
+      "hashPath": "microsoft.extensions.http.resilience.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Resilience/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QqpjuGYLQPd3vueN6dP5QAFlZRm+rE7GBSWu2h9EwJHt9A/YnO1iM3eJAUNajQ/OL8oqVn4VequbybTirY6vWw==",
+      "path": "microsoft.extensions.resilience/8.0.0",
+      "hashPath": "microsoft.extensions.resilience.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Telemetry/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JsIErSvWidQKIt17kF/Th5ag374D9duZKaDODeb3Sq6X5IpE7YHieykisy89XdKf+k8ocE+aqxcvInlbiRVXKw==",
+      "path": "microsoft.extensions.telemetry/8.0.0",
+      "hashPath": "microsoft.extensions.telemetry.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Telemetry.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lsFZSSPUO3KVHuiVUHB+HM4OF6dZywXlgab8S5Wh9I2GeXJPXAxWU7SX0wPiqdTkmH3J9z3bUu2lOwrPTXQsjQ==",
+      "path": "microsoft.extensions.telemetry.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.telemetry.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.IO.RecyclableMemoryStream/2.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Oh1qXXFdJFcHozvb4H6XYLf2W0meZFuG0A+TfapFPj9z5fd4vxiARGEhAaLj/6XWQaMYIv4SH/9Q6H78Hw0E2Q==",
+      "path": "microsoft.io.recyclablememorystream/2.3.2",
+      "hashPath": "microsoft.io.recyclablememorystream.2.3.2.nupkg.sha512"
     },
     "Microsoft.OpenApi/2.7.5": {
       "type": "package",
@@ -447,6 +767,48 @@
       "sha512": "sha512-nd1DXN9SwnzdJKtR+EqXHGE6cbkbKjo3AViwpGIBurrLEnYevC8vqkRSKdfhuHViSsihqWXF+Q9rR19yyNFiOA==",
       "path": "nswag.generation.aspnetcore/14.7.1",
       "hashPath": "nswag.generation.aspnetcore.14.7.1.nupkg.sha512"
+    },
+    "Polly.Core/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g+8HnRjFTs8Ujz4Si4slrVrEK9M92DjvF75WvNpnF/lbT8M3/xW+tuD2udTiv2KuOsFOsRfOcZ12PddizrtXVA==",
+      "path": "polly.core/8.0.0",
+      "hashPath": "polly.core.8.0.0.nupkg.sha512"
+    },
+    "Polly.Extensions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XGasiRYj4ecCLBrIH/caPRkrUb891KbNYSLB+JFy/wh7wVt8Su7dNqhiP7FjcJXTa+0MA96UR7l0uFmhSUSaYQ==",
+      "path": "polly.extensions/8.0.0",
+      "hashPath": "polly.extensions.8.0.0.nupkg.sha512"
+    },
+    "Polly.RateLimiting/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x4GgLxNcSLILTyjLJxUItbfr4HyPq5DhMh8FpY8CZDCf4wrGXZtHzaD6NjNB93oVEZxntYv4rpx0SDMAdj3Nqw==",
+      "path": "polly.ratelimiting/8.0.0",
+      "hashPath": "polly.ratelimiting.8.0.0.nupkg.sha512"
+    },
+    "RateLimitHeaders/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IXNGGzgg0CODW3f3FOPuPcuNcOxzg3MtQ/udsR9pfhBBzKkTLB9jb6X2BDRRzh6gYQJICJafcuYoJfCxN1dmgw==",
+      "path": "ratelimitheaders/1.0.0",
+      "hashPath": "ratelimitheaders.1.0.0.nupkg.sha512"
+    },
+    "RateLimitHeaders.Polly/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8fBX70oZb8aaK4YZRTmV7BIbfAo1PZ9Hy43ETCZ1DXeEfwxgMoBbwH2ZWAPSIpY2ukXcR+PTcXcubCjj1UooBw==",
+      "path": "ratelimitheaders.polly/1.0.0",
+      "hashPath": "ratelimitheaders.polly.1.0.0.nupkg.sha512"
+    },
+    "Superpower/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bjKbAYWePooCAvPxQq+3KnmcLfRggMyRoXmtBMlmCG71bdwBHrO6rmRJ2DRIodg5aztNcxeZXBUVWT+H+MZUhw==",
+      "path": "superpower/3.0.0",
+      "hashPath": "superpower.3.0.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Swagger/10.2.3": {
       "type": "package",

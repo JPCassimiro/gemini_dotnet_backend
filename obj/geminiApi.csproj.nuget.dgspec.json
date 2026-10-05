@@ -52,6 +52,14 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Cloudflare.NET.Api": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Google.GenAI": {
               "target": "Package",
               "version": "[1.16.0, )"
@@ -59,6 +67,10 @@
             "Google_GenerativeAI": {
               "target": "Package",
               "version": "[3.6.7, )"
+            },
+            "Groq": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
