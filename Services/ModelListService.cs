@@ -24,7 +24,7 @@ public class ModelListService : IModelListInterface
     public async Task<List<string>> GetModelListFromFile(string provider)
     {
         string jsonContent = _jsonUtility.ReadJsonFileString(modelListFolder+provider);
-        List<string> deserializedContent = JsonSerializer.Deserialize<List<string>>(jsonContent);
+        List<string> deserializedContent= JsonSerializer.Deserialize<List<string>>(jsonContent);
         return deserializedContent;
     }
 
@@ -38,7 +38,7 @@ public class ModelListService : IModelListInterface
             var provider = _creatorController.FetchProvider(name);
             var providerModelList = await provider.GetModelList();
             fullModelList.Add(name,providerModelList);
-            SaveModelList(provider.GetProviderName(), providerModelList);
+            await SaveModelList(provider.GetProviderName(), providerModelList);
         }
         Console.WriteLine($"ModelListService ReturnAllModelList fullModelList: {fullModelList.Count}");
         return fullModelList;

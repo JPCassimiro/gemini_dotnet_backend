@@ -12,8 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<IChatProviderService, TelegramService>();//one instance for every requisition
-// builder.Services.AddSingleton<AiService, GeminiService>();
 builder.Services.AddSingleton<CreatorController>();
+builder.Services.AddScoped<IModelListInterface, ModelListService>();//instance is created on a requisition basis, if the same requisition is made there will be no new instance
 builder.Services.AddScoped<IMessageProcessorInterface, MessageProcessor>();//instance is created on a requisition basis, if the same requisition is made there will be no new instance
 builder.Services.AddHttpClient();
 
